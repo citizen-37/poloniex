@@ -1,4 +1,4 @@
-package main
+package poloniex
 
 import (
 	"encoding/json"
