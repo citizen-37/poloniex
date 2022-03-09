@@ -36,12 +36,8 @@ func (p *Parser) IsApplicable(message []interface{}) bool {
 
 	record := body[0].([]interface{})
 
-	if record[0].(string) == "o" || record[0].(string) == "t" {
-		return true
-	}
-
-	for _, itemParer := range p.itemParsers {
-		if itemParer.IsApplicable(record) {
+	for _, itemParser := range p.itemParsers {
+		if itemParser.IsApplicable(record) {
 			return true
 		}
 	}
